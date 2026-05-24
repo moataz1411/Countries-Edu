@@ -1,0 +1,150 @@
+body{
+    font-family: sans-serif;
+    color:bisque;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    height:10px;
+}
+::-webkit-scrollbar-track{
+    background:#2d2733;
+}
+::-webkit-scrollbar-thumb{
+    background:#555;
+}
+::-webkit-scrollbar-thumb:hover{
+    background:#cca7fa;
+}
+.worldmap{
+    position:absolute;
+    top:0;
+    left:0;
+    width: max-content;
+    height: max-content;
+    min-height:48;
+    display:flex;
+    background-color:#212021;
+    align-items: center;
+    justify-content: center;
+}
+svg{
+    width: 100vw;
+
+    height: 100vh;
+}
+path{
+    fill:#443d4b;
+    stroke:#dcbfff;
+    transition: 100ms;
+}
+path:hover{
+    fill:#c99aff;
+}
+.sidepanel{
+    position:fixed;
+    top:0;
+    padding:32px;
+    background-color: #1d1a20;
+    left: -480px;
+    height:100vh;
+    width:100%;
+    max-width:480px;
+    transition: 600ms cubic-bezier(0.8, 0, 0.17, 1);
+    overflow: scroll;
+    z-index: 1;
+}
+.sidepanel .container{
+    padding-block: 32px;
+    transform: 200ms ease-out;
+
+}
+.sidepanel-open{
+    left: 0;
+}
+.hide{
+    opacity:0;
+}
+.closebutton{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 80px;
+    height: 80px;
+    border: none;
+    background-color: #443d4b;
+    color:fff;
+    transition: 100ms;
+    cursor: pointer;
+}
+.loading{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    pointer-events: none;
+    user-select: none;
+    transition: 200ms;
+}
+.closebutton i{
+    font-size: 32px;
+
+}
+.closebutton:hover{
+    background-color: #c99aff;
+}
+.flag{
+   width: 60%;
+   max-width: 320px;
+   margin-block: 16px; 
+}
+.sidepanel .container > ul >li{
+    margin-bottom: 32;
+}
+.sidepanel li{
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+.sidepanel ul ul{
+    margin-top:16px;
+    font-size: 15px;
+    list-style: circle;
+    padding-left: 32px;
+
+}
+.sidepanel strong{
+    color: #dcbfff;
+}
+.zoomcontrol{
+    position: fixed;
+    top: 16px;
+    right:16px;
+}
+.zoomcontrol button{
+    display: block;
+    width: 24px;
+    height: 24px;
+    font-size: 32;
+    background-color: #443d4b;
+    color:#fff;
+    border: 1pz #dcbfff solid;
+    cursor: pointer;
+
+}
+.zoomcontrol button:hover{
+    background-color: #2e2a33;
+}
+button:disabled{
+    background-color: #1d1a20;
+    border:1px #443d4b solid;
+cursor: default;
+color: #333;
+
+}
+.zoom-out{
+    margin-bottom: 10px;}
+
