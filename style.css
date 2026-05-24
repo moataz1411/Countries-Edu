@@ -202,5 +202,17 @@ opacity: 0.4;
     background: #c99aff;
     transform: translateY(-3px);
 }
+.copyright{
+    position:fixed;
+    bottom:10px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:14px;
+    letter-spacing: 1px;
+    background: rgba(30, 27, 36, 0.5);
+    padding: 6px 15px;
+    border-radius: 10px;
+    
+}
 
 
