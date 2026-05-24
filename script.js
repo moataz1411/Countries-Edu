@@ -14,6 +14,7 @@ const areaout=document.querySelector(".area");
 const currencyout=document.querySelector(".currency");
 const language=document.querySelector(".languages");
 
+
 countries.forEach(country => {
     country.addEventListener("mouseenter",function(){
         const classList=[...this.classList].join('.');
