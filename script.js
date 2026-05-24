@@ -13,7 +13,7 @@ const countryflag= document.querySelector(".flag");
 const areaout=document.querySelector(".area");
 const currencyout=document.querySelector(".currency");
 const language=document.querySelector(".languages");
-
+const fullscreenbutton=document.getElementById("fullscreenbtn");
 
 countries.forEach(country => {
     country.addEventListener("mouseenter",function(){
@@ -100,4 +100,13 @@ function applyZoom() {
 
     zoomValueText.innerText = Math.round(zoom * 100) + "%";
 }
+fullscreenbutton.addEventListener("click",()=>{
+    if(!document.fullscreenElement){
+        document.documentElement.requestFullscreen();
+        fullscreenbutton.innerHTML='<i class="fa-solid fa-compress"></i>';
+    }else{
+        document.exitFullscreen();
+        fullscreenbutton.innerHTML='<i class="fa-solid fa-expand"></i>';
+    }
+});
 
