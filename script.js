@@ -14,6 +14,7 @@ const areaout=document.querySelector(".area");
 const currencyout=document.querySelector(".currency");
 const language=document.querySelector(".languages");
 const fullscreenbutton=document.getElementById("fullscreenbtn");
+const themebtn=document.getElementById("themebtn")
 
 countries.forEach(country => {
     country.addEventListener("mouseenter",function(){
@@ -109,4 +110,8 @@ fullscreenbutton.addEventListener("click",()=>{
         fullscreenbutton.innerHTML='<i class="fa-solid fa-expand"></i>';
     }
 });
-
+themebtn.addEventListener("click",()=>{
+    document.body.classList.toggle("light");
+    if(document.body.classList.contains("light")){themebtn.innerHTML='<i class="fa-solid fa-sun"></i>';}
+else{themebtn.innerHTML='<i class="fa-solid fa-moon"></i>';}
+});

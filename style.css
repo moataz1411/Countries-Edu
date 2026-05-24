@@ -212,7 +212,42 @@ opacity: 0.4;
     background: rgba(30, 27, 36, 0.5);
     padding: 6px 15px;
     border-radius: 10px;
-    
+
+}
+body.light{
+    background: #949393;
+    color: #222;
+}
+body.light .sidepanel{
+    background: #f9e1e1;
+    color: #222;
+}
+body.light path{
+    fill:#aaa2a2;
+    stroke:#999;
+}
+body.light .headertitle, body.light .copyright{
+    background: rgba(255,255,255,0.8);
+    color:#222;
+}
+.themebutton{
+    position: fixed;
+    bottom: 16px;
+    right: 80px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background: #443d4b;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 9999;
+    transition: 200ms;
 }
 
+.themebutton:hover{
+    transform: translateY(-3px);
+    background: #c99aff;
+}
 
