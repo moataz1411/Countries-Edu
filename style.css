@@ -69,18 +69,7 @@ path:hover{
 .hide{
     opacity:0;
 }
-.closebutton{
-    position: absolute;
-    top:0;
-    right:0;
-    width: 80px;
-    height: 80px;
-    border: none;
-    background-color: #443d4b;
-    color:fff;
-    transition: 100ms;
-    cursor: pointer;
-}
+
 .loading{
     position:absolute;
     top:50%;
@@ -91,7 +80,23 @@ path:hover{
     transition: 200ms;
 }
 .closebutton i{
-    font-size: 32px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: #443d4b;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 200ms ease;
+    z-index: 5;
+
 
 }
 .closebutton:hover{
@@ -123,28 +128,40 @@ path:hover{
     position: fixed;
     top: 16px;
     right:16px;
+    display: flex;
+    flex-direction:column;
+    gap:10px;
+    z-index: 8;
 }
 .zoomcontrol button{
-    display: block;
-    width: 24px;
-    height: 24px;
-    font-size: 32;
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
     background-color: #443d4b;
     color:#fff;
-    border: 1pz #dcbfff solid;
     cursor: pointer;
+    border:none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+transition: 200ms;
+background: #443d4b;
 
 }
 .zoomcontrol button:hover{
-    background-color: #2e2a33;
+    background: #6d5d74;
+transform: translateY(-3px);
 }
-button:disabled{
-    background-color: #1d1a20;
-    border:1px #443d4b solid;
-cursor: default;
-color: #333;
+.zoomcontrol button:disabled{
+    background: #2d2a33;
+    
+cursor: not-allowed;
+opacity: 0.4;
 
 }
-.zoom-out{
-    margin-bottom: 10px;}
+.zoom-value{
+    text-align: center;
+    color: #dcbfff;
+    padding-top: 4px;
+    font: size 18px;
+}
+
 
