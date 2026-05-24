@@ -79,7 +79,7 @@ path:hover{
     user-select: none;
     transition: 200ms;
 }
-.closebutton i{
+.closebutton{
     position: absolute;
     top: 15px;
     right: 15px;
@@ -108,7 +108,7 @@ path:hover{
    margin-block: 16px; 
 }
 .sidepanel .container > ul >li{
-    margin-bottom: 32;
+    margin-bottom: 32px;
 }
 .sidepanel li{
     margin-bottom: 16px;
@@ -161,7 +161,46 @@ opacity: 0.4;
     text-align: center;
     color: #dcbfff;
     padding-top: 4px;
-    font: size 18px;
+    font-size: 18px;
 }
+.tooltip{
+    position:absolute;
+    background: #1d1a20;
+    color: #fff;
+    padding:12px 16px;
+    border-radius: 12px;
+    display: none;
+    min-width: 160px;
+    z-index: 999;
+
+}
+.tooltip .arrow{
+    position: absolute;
+    width:10px;
+    height:10px;
+    background:#1d1a20;
+    transform: rotate(45deg);
+}
+.tooltip[data-pos="right"].arrow{
+    left:-5px;
+    top:50%;
+    transform:translateY(-50%)rotate(45deg);
+}
+.tooltip[data-pos="left"].arrow{
+    left:-5px;
+    top:50%;
+    transform:translateY(-50%)rotate(45deg);
+}
+.tooltip[data-pos="top"].arrow{
+    left:-5px;
+    top:50%;
+    transform:translateY(-50%)rotate(45deg);
+}
+.tooltip[data-pos="bottom"].arrow{
+    left:-5px;
+    top:50%;
+    transform:translateY(-50%)rotate(45deg);
+}
+
 
 
